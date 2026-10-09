@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0a14">
+<title>Neon Gym — a 3D idle gym tycoon</title>
+<meta name="description" content="Neon Gym is a free 3D idle gym tycoon. Serve members, upgrade 30 machines and unlock 10 rooms. Play in your browser or install the Android app.">
+<meta property="og:title" content="Neon Gym — a 3D idle gym tycoon">
+<meta property="og:description" content="Start with one squat rack and build the neon gym of your dreams. Free, no ads, no account.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ishak-skr.github.io/neon-gym/">
+<meta property="og:image" content="https://ishak-skr.github.io/neon-gym/icon-512.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-512.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="./"><img src="icon-512.png" alt="" width="36" height="36">Neon Gym</a>
+    <nav aria-label="Main">
+      <a href="#info">Quick info</a>
+      <a href="#how">How it plays</a>
+      <a href="#screens" id="navShots">Screenshots</a>
+      <a href="#get">Get the game</a>
+      <a href="https://ishak-skr.github.io/">Ishak-Skr</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="hero">
+      <div>
+        <h1 class="sign">
+          <svg viewBox="0 0 538 370" role="img" aria-label="Neon Gym">
+            <defs>
+              <filter id="blur" filterUnits="userSpaceOnUse" x="-50" y="-50" width="240" height="240">
+                <feGaussianBlur stdDeviation="9"/>
+              </filter>
+              <path id="L-N" d="M0 120V0L90 120V0"/>
+              <path id="L-E" d="M76 0H0V120H76M0 60H58"/>
+              <rect id="L-O" x="0" y="0" width="100" height="120" rx="50"/>
+              <path id="L-G" d="M98 32C90 12 72 0 50 0C22 0 0 26 0 60C0 94 22 120 50 120C80 120 100 98 100 66V64H56"/>
+              <path id="L-Y" d="M0 0L48 64L96 0M48 64V120"/>
+              <path id="L-M" d="M0 120V0L60 76L120 0V120"/>
+            </defs>
+
+            <!-- NEON -->
+            <g class="tube pink" style="--d:.15s" transform="translate(40 40)"><use href="#L-N" class="halo"/><use href="#L-N" class="body"/><use href="#L-N" class="core"/></g>
+            <g class="tube pink" style="--d:.55s" transform="translate(164 40)"><use href="#L-E" class="halo"/><use href="#L-E" class="body"/><use href="#L-E" class="core"/></g>
+            <g class="tube pink" style="--d:.35s" transform="translate(274 40)"><use href="#L-O" class="halo"/><use href="#L-O" class="body"/><use href="#L-O" class="core"/></g>
+            <g class="tube pink" style="--d:.8s" transform="translate(408 40)"><use href="#L-N" class="halo"/><use href="#L-N" class="body"/><use href="#L-N" class="core"/></g>
+
+            <!-- GYM -->
+            <g class="tube cyan" style="--d:1.1s" transform="translate(77 210)"><use href="#L-G" class="halo"/><use href="#L-G" class="body"/><use href="#L-G" class="core"/></g>
+            <g class="tube cyan" style="--d:1.4s" transform="translate(211 210)"><use href="#L-Y" class="halo"/><use href="#L-Y" class="body"/><use href="#L-Y" class="core"/></g>
+            <g class="tube cyan" style="--d:1.25s" transform="translate(341 210)"><use href="#L-M" class="halo"/><use href="#L-M" class="body"/><use href="#L-M" class="core"/></g>
+          </svg>
+        </h1>
+
+        <p class="lead">A 3D idle gym tycoon.</p>
+        <p class="sub">Start with a single squat rack. Serve members, upgrade your machines and unlock new rooms until yours is the biggest gym around.</p>
+        <div class="actions">
+          <a class="btn primary" href="game.html">Play in your browser</a>
+          <a class="btn ghost" href="neon-gym-1.0.0.apk" download>Download for Android</a>
+        </div>
+        <p class="fine">Free. No ads, no account, no purchases.</p>
+      </div>
+
+      <div class="phone" id="phone">
+        <img src="Screenshot_20261009-010348.png" alt="Neon Gym on a phone" width="1080" height="2400" onerror="document.getElementById('phone').remove();document.getElementById('hero').classList.add('no-phone')">
+      </div>
+    </div>
+
+    <section id="info">
+      <h2>Quick info</h2>
+      <dl class="facts">
+        <div><dt>Game</dt><dd>Neon Gym, a 3D idle gym tycoon</dd></div>
+        <div><dt>Price</dt><dd>Free. No ads, no purchases</dd></div>
+        <div><dt>Players</dt><dd>Single-player, no account</dd></div>
+        <div><dt>Platforms</dt><dd>Android 8.0 or newer, and any modern browser</dd></div>
+        <div><dt>Version</dt><dd>1.0.0, under 2 MB</dd></div>
+        <div><dt>Controls</dt><dd>Tap machines and pads, drag to look around, pinch to zoom</dd></div>
+        <div><dt>Goal</dt><dd>Collect 30 machines, unlock 10 rooms, reach level 50</dd></div>
+        <div><dt>Language</dt><dd>English</dd></div>
+        <div><dt>Developer</dt><dd><a href="https://ishak-skr.github.io/">Ishak-Skr</a></dd></div>
+      </dl>
+    </section>
+
+    <section id="how">
+      <h2>How it plays</h2>
+      <div class="cols">
+        <div>
+          <h3 class="p">Serve members</h3>
+          <p>Tap a machine or a pad to put members to work. Every workout earns money, and your gym keeps earning while you're away.</p>
+        </div>
+        <div>
+          <h3 class="c">Upgrade and expand</h3>
+          <p>Level up your equipment, collect all 30 machines and open 10 rooms. Reach level 50 and you've built a legend.</p>
+        </div>
+        <div>
+          <h3 class="v">Make it yours</h3>
+          <p>Name your gym, drag to look around and pinch to zoom. Keep several save slots and tune the music and sound effects.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="screens">
+      <h2>Inside the gym</h2>
+      <div class="shots" id="shots">
+        <figure><img src="Screenshot_20261009-010348.png" alt="Neon Gym screenshot 1" width="1080" height="2400" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>Your gym floor</figcaption></figure>
+        <figure><img src="Screenshot_20261009-010437.png" alt="Neon Gym screenshot 2" width="1080" height="2400" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>Machines and members</figcaption></figure>
+        <figure><img src="Screenshot_20261009-010455.png" alt="Neon Gym screenshot 3" width="1080" height="2400" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>Neon Gym in action</figcaption></figure>
+        <figure><img src="shot-04.png" alt="Neon Gym screenshot 4" width="1080" height="2400" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>More of the gym</figcaption></figure>
+        <figure><img src="shot-05.png" alt="Neon Gym screenshot 5" width="1080" height="2400" loading="lazy" onerror="this.closest('figure').remove()"><figcaption>Look around</figcaption></figure>
+      </div>
+      <p class="fine">Screenshots from the Android version.</p>
+    </section>
+
+    <section id="get">
+      <h2>Get Neon Gym</h2>
+      <div class="rows">
+        <div class="row">
+          <div>
+            <h3>Android app</h3>
+            <p>Version 1.0.0. Needs Android 8.0 or newer. If Android asks, allow installs from your browser.</p>
+          </div>
+          <a class="btn ghost" href="neon-gym-1.0.0.apk" download>Download APK</a>
+        </div>
+        <div class="row">
+          <div>
+            <h3>In your browser</h3>
+            <p>No install needed. Works best on a phone or tablet with a recent browser.</p>
+          </div>
+          <a class="btn primary" href="game.html">Play now</a>
+        </div>
+        <div class="row">
+          <div>
+            <h3>Solana dApp Store</h3>
+            <p>Coming to Seeker and the Solana dApp Store.</p>
+          </div>
+          <span class="status">Coming soon</span>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Ishak-Skr. Neon Gym is my first game.</span>
+    <nav aria-label="Legal and links">
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms &amp; Conditions</a>
+      <a href="https://ishak-skr.github.io/">Back to Ishak-Skr</a>
+      <a href="https://github.com/Ishak-Skr/neon-gym/issues">Report a problem</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="site.js"></script>
+</body>
+</html>

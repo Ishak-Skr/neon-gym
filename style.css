@@ -1,0 +1,147 @@
+/* Neon Gym site — palette taken from the game itself (pink #ff2d95, cyan #18e0ff on a dark wall) */
+:root{
+  --wall:#0b0a14;
+  --wall-2:#14102a;
+  --ink:#f1eefc;
+  --mute:#a8a3c2;
+  --line:#2a2545;
+  --pink:#ff2d95;
+  --cyan:#18e0ff;
+  --violet:#b078ff;
+  --body:Nunito,ui-rounded,"SF Pro Rounded","Trebuchet MS",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--wall);
+  background-image:radial-gradient(70% 45% at 25% 0%,#1d1340 0,transparent 70%);
+  background-repeat:no-repeat;
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:1.0625rem;
+  line-height:1.65;
+  font-weight:600;
+}
+img{max-width:100%;display:block}
+a{color:var(--cyan);text-underline-offset:3px}
+a:hover{color:#fff}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:900;font-size:1.1rem;letter-spacing:.01em}
+.brand img{width:36px;height:36px;border-radius:9px;border:1px solid var(--line)}
+.top nav{display:flex;gap:22px;flex-wrap:wrap}
+.top nav a{color:var(--mute);text-decoration:none;font-weight:800}
+.top nav a:hover,.top nav a[aria-current="page"]{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;gap:36px;align-items:center;padding:28px 0 64px}
+@media (min-width:880px){.hero{grid-template-columns:1.15fr .85fr;padding:44px 0 88px}}
+.hero.no-phone{grid-template-columns:1fr}
+.sign{margin:0;width:min(100%,520px)}
+.sign svg{width:100%;height:auto;overflow:visible;display:block}
+.tube use{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:var(--c)}
+.tube .halo{stroke-width:30;opacity:.55;filter:url(#blur)}
+.tube .body{stroke-width:12}
+.tube .core{stroke:#fff;stroke-width:3.5;opacity:.88}
+.pink{--c:var(--pink)}
+.cyan{--c:var(--cyan)}
+.tube{animation:tube-on 1.3s linear both;animation-delay:var(--d,0s)}
+@keyframes tube-on{
+  0%{opacity:.05}
+  7%{opacity:.95}
+  11%{opacity:.08}
+  20%{opacity:1}
+  27%{opacity:.2}
+  34%{opacity:1}
+  40%{opacity:.55}
+  48%{opacity:1}
+  100%{opacity:1}
+}
+.lead{font-size:clamp(1.15rem,2.4vw,1.4rem);line-height:1.5;font-weight:800;margin:28px 0 10px;max-width:34ch}
+.sub{color:var(--mute);margin:0 0 28px;max-width:52ch}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 24px;border-radius:999px;
+  font:inherit;font-weight:900;text-decoration:none;
+  border:2px solid var(--pink);
+}
+.btn.primary{background:var(--pink);color:#0b0a14}
+.btn.primary:hover{background:#ff5aab;border-color:#ff5aab;color:#0b0a14}
+.btn.ghost{background:transparent;color:var(--cyan);border-color:var(--cyan)}
+.btn.ghost:hover{background:var(--cyan);color:#0b0a14}
+.fine{color:var(--mute);font-size:.95rem;margin:18px 0 0}
+
+.phone{
+  justify-self:center;width:min(100%,290px);aspect-ratio:9/20;
+  border:10px solid #1b1830;border-radius:40px;overflow:hidden;background:#000;
+  box-shadow:0 0 0 1px var(--line),0 30px 80px -30px #ff2d9566;
+}
+.phone img{width:100%;height:100%;object-fit:cover}
+
+/* sections */
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.6rem,3.6vw,2.2rem);line-height:1.15;margin:0 0 28px;font-weight:900;letter-spacing:-.01em}
+h3{margin:0 0 6px;font-size:1.15rem;font-weight:900}
+.cols{display:grid;gap:32px}
+@media (min-width:760px){.cols{grid-template-columns:repeat(3,1fr);gap:48px}}
+.cols p{margin:0;color:var(--mute)}
+.cols h3.p{color:var(--pink)}
+.cols h3.c{color:var(--cyan)}
+.cols h3.v{color:var(--violet)}
+
+.shots{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 18px;margin:0;-webkit-overflow-scrolling:touch}
+.shots figure{margin:0;flex:0 0 min(240px,62vw);scroll-snap-align:start}
+.shots img{width:100%;aspect-ratio:9/20;object-fit:cover;border-radius:24px;border:1px solid var(--line);background:var(--wall-2)}
+.shots figcaption{color:var(--mute);font-size:.95rem;margin-top:10px}
+
+.rows{display:grid}
+.row{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:22px 0;border-bottom:1px solid var(--line)}
+.row:first-child{padding-top:0}
+.row>div{flex:1 1 320px;max-width:62ch}
+.row p{margin:0;color:var(--mute)}
+.row .status{color:var(--mute);font-weight:800}
+
+/* footer */
+footer{border-top:1px solid var(--line);padding:32px 0 44px;color:var(--mute);font-size:.98rem}
+footer .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
+footer nav{display:flex;gap:20px;flex-wrap:wrap}
+footer a{color:var(--mute)}
+footer a:hover{color:var(--ink)}
+
+/* legal pages */
+.doc{padding:28px 0 72px;max-width:70ch}
+.doc h1{font-size:clamp(2rem,5vw,3rem);line-height:1.1;margin:0 0 8px;font-weight:900;letter-spacing:-.015em}
+.doc .meta{color:var(--mute);margin:0 0 36px}
+.doc h2{font-size:1.3rem;margin:40px 0 10px;color:var(--ink)}
+.doc p,.doc li{color:#d9d5ec;font-weight:600}
+.doc ul{padding-left:1.2rem}
+.doc li{margin:6px 0}
+.doc .summary{border-left:4px solid var(--pink);padding:2px 0 2px 18px;margin:0 0 8px}
+.doc .summary p{margin:0;color:var(--ink);font-weight:800}
+
+@media (prefers-reduced-motion:reduce){
+  .tube{animation:none}
+}
+@media print{
+  body{background:#fff;color:#000}
+  .top,footer,.hero{display:none}
+  .doc p,.doc li{color:#000}
+}
+
+/* quick info fact sheet */
+.facts{display:grid;gap:0 48px;margin:0}
+@media (min-width:760px){.facts{grid-template-columns:1fr 1fr}}
+.facts>div{display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)}
+.facts dt{flex:0 0 7.5rem;color:var(--cyan);font-weight:900}
+.facts dd{margin:0;color:var(--ink)}
